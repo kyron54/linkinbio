@@ -2,46 +2,116 @@
 <html>
   <head>
     <title>LinkInBio</title>
-    <link rel="stylesheet" href="style.css">
-    <meta charset="UTF-8">
     <style>
-      * {  
-        border: 1px red solid; 
+      html {
+        min-height: 100%;
       }
-      </style>
+      body {
+        min-height: 100%;
+        padding: 40px 0 40px 0;
+        background: linear-gradient(180deg, #1c5b2f, #076f56, #09837f, #3394a5, #60a4c7, #8fb3e1, #bdc1f3, #e8d0ff); /* made at https://learnui.design/tools/gradient-generator.html */
+        font-family: "Georgia";
+        font-size: 24px;
+        font-weight: 900;
+      }
+      .profile-image {
+          width: 128px;
+          height: 128px;
+          object-fit: cover;
+          border-radius: 128px;
+          border: white 2px solid;
+        }
+        .thumbnail {
+          width: 48px;
+          height: 48px;
+          border-radius: 48px;
+          object-fit: cover;
+        }
+        .main-container {
+          max-width: 640px;
+          margin: auto;
+        }
+        .image-container {
+          margin-bottom: 20px;
+          text-align: center;
+        }
+        .name-container {
+          color: white;
+          margin-bottom: 30px;
+          text-align: center;
+        }
+        .socials-container {
+          color: white;
+          margin-bottom: 30px;
+          display: flex;
+          justify-content: space-around;
+          font-family: "courier new";
+          font-size: 20px;
+        }
+        .item {
+          margin-bottom: 20px;
+          display: flex;
+          align-items: center;
+          font-family: "courier new";
+          font-size: 20px;
+          background-color: rgba(255, 255, 255, 0.5);
+          border-radius: 1000px;
+          padding: 5px;
+          padding-right: 53px;
+          box-shadow: 4px 4px 10px 0px rgba(122, 32, 122, 0.5);
+        }
+        .link-text {
+          text-align: center;
+          flex-grow: 1;
+        }
+        a {
+          color: black;
+          text-decoration: none;
+        }
+        
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/js/all.min.js"></script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
 
   <body>
-    <main>
+    <div class="main-container">
       <div class="image-containter">
-        <img src="images/ProfilePic.png">
+        <img class="profile-image" src="images/ProfilePic.png">
       </div>
       
       <div class="name-container">
         <h1>Kyron Patterson</h1>
       </div>
 
-      <div class="socialIcons">
-        <a href="https://www.linkedin.com/in/kyronpatterson/" target="_blank">
-          LinkedIn
+      <div class="socials-container">
+        <a href="https://www.linkedin.com/in/kyronpatterson/" target="_blank"><i class="fa-brands fa-linkedin"></i> LinkedIn
         </a>
   
-        <a href="https://www.instagram.com/klp_thelove13/" target="_blank">
+        <a href="https://www.instagram.com/klp_thelove13/" target="_blank"><i class="fa-brands fa-instagram"></i>
           Instagram 
         </a>
 
-        <a href="https://github.com/kyron54" target="_blank">
+        <a href="https://github.com/kyron54" target="_blank"><i class="fa-brands fa-github"></i>
           GitHub
         </a>
       </div>
 
       <div class="links"> 
         <div class="item">
-          <a href="https://kyronlpatterson.myportfolio.com" target="_blank">
+          <img class="thumbnail" src="images/Briefcase.png" alt="briefcase emoji">
+          <a class="link-text" href="https://kyronlpatterson.myportfolio.com" target="_blank">
             My Portfolio
           </a>
         </div> <!--Item class-->
+        <div class="item">
+          <img class="thumbnail" src="images/Youtube.png" alt="Youtube logo">
+          <a class ="link-text" href="https://www.youtube.com/@kyronpatterson409" target="_blank"> Youtube Channel
+          </a>
+        </div>
       </div> <!--Links-->
-    </main>
+    </div>
   </body>
 </html>
